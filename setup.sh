@@ -2,7 +2,20 @@
 
 sudo apt-get install ripgrep
 
-mkdir -p ~/.local/share/fonts
-cp .font/{*.ttf,*.otf} ~/.local/share/fonts
-sudo cp *.ttf /usr/share/fonts/truetype/
+# setup font
+sudo cp .font/*.ttf /usr/share/fonts/truetype/
 sudo fc-cache -f -v
+
+# setup vim-plug
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+# install homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
+
+# install sqlfluff
+brew install sqlfluff
+
+# install code-minimap
+brew install code-minimap
