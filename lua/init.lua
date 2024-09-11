@@ -1,6 +1,18 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
+-- setup colorscheme
+local dracolors = require("dracula").colors()
+require("dracula").setup({
+  colors = dracolors,
+  transparent_bg = true,
+  italic_comment = true,
+  show_end_of_buffer = false,
+  overrides = {},
+})
+
+vim.cmd.colorscheme("dracula")
+
 require("go").setup()
 require("go.format").goimports()
 
