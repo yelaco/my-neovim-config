@@ -14,6 +14,9 @@ require("dracula").setup({
 vim.cmd.colorscheme("dracula")
 vim.cmd([[highlight CursorLine guibg=#3A414C]])
 
+-- setup flutter development environment
+require("flutter-tools").setup({})
+
 -- setup go development environment
 require("go").setup()
 require("go.format").goimports()

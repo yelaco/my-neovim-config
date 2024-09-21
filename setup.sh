@@ -19,3 +19,6 @@ brew install sqlfluff
 
 # install code-minimap
 brew install code-minimap
+
+# flutter dependencies
+sudo apt-get install clang cmake ninja-build pkg-config libgtk-3-dev liblzma-dev libstdc++-12-dev
