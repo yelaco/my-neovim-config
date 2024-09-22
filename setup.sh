@@ -22,3 +22,9 @@ brew install code-minimap
 
 # flutter dependencies
 sudo apt-get install clang cmake ninja-build pkg-config libgtk-3-dev liblzma-dev libstdc++-12-dev
+
+# tmux
+sudo apt install tmux
+
+# bash-profile
+echo 'source ~/.bashrc' >> ~/.bash_profile
