@@ -15,9 +15,5 @@ endfunction
 
 lua require('init')
 
-set tabstop=4
-set softtabstop=0
-set shiftwidth=4
-set noexpandtab
 set autoindent
 set clipboard=unnamedplus
