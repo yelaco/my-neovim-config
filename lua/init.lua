@@ -30,3 +30,6 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   end,
   group = format_sync_grp,
 })
+
+-- Custom keymaps
+vim.keymap.set("n", "<Leader>mp", "<cmd>MarkdownPreview<CR>", { desc = "Markdown Preview" })
