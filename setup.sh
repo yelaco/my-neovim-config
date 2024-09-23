@@ -25,6 +25,7 @@ sudo apt-get install clang cmake ninja-build pkg-config libgtk-3-dev liblzma-dev
 
 # tmux
 sudo apt install tmux
+cp .others/.tmux.conf ~/
 
 # bash-profile
 echo 'source ~/.bashrc' >> ~/.bash_profile
