@@ -28,5 +28,5 @@ cp .others/.tmux.conf ~/
 echo 'source ~/.bashrc' >> ~/.bash_profile
 
 # shell
-cp .others/neofetch ~/.config/
-cp .others/synth-shell ~/.config/
+cp -r .others/neofetch ~/.config/
+cp -r .others/synth-shell ~/.config/
