@@ -17,9 +17,6 @@ echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
 # install sqlfluff
 brew install sqlfluff
 
-# install code-minimap
-brew install code-minimap
-
 # flutter dependencies
 sudo apt-get install clang cmake ninja-build pkg-config libgtk-3-dev liblzma-dev libstdc++-12-dev
 
@@ -29,3 +26,7 @@ cp .others/.tmux.conf ~/
 
 # bash-profile
 echo 'source ~/.bashrc' >> ~/.bash_profile
+
+# shell
+cp .others/neofetch ~/.config/
+cp .others/synth-shell ~/.config/
