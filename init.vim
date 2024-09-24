@@ -1,6 +1,10 @@
 call plug#begin('~/.vim/plugged')
 Plug 'nvim-tree/nvim-web-devicons'
+Plug 'norcalli/nvim-colorizer.lua'
 call plug#end()
+
+set termguicolors
+lua require'colorizer'.setup()
 
 Plug 'tpope/vim-fugitive', { 'on': [] }
 command! Gstatus call LazyLoadFugitive('Git status')
