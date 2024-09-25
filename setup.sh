@@ -30,3 +30,18 @@ echo 'source ~/.bashrc' >> ~/.bash_profile
 # shell
 cp -r .others/neofetch ~/.config/
 cp -r .others/synth-shell ~/.config/
+
+# gtk theme
+git clone https://github.com/dracula/gtk ./Dracula
+cp -r Dracula/assets ~/.config
+mkdir ~/.config/gtk-4.0
+cp Dracula/gtk-4.0/gtk.css ~/.config/gtk-4.0
+cp Dracula/gtk-4.0/gtk-dark.css ~/.config/gtk-4.0
+sudo mv Dracula /usr/share/themes/
+gsettings set org.gnome.desktop.interface gtk-theme "Dracula"
+gsettings set org.gnome.desktop.wm.preferences theme "Dracula"
+wget https://github.com/dracula/gtk/files/5214870/Dracula.zip
+mkdir -p ~/.icons/Dracula
+sudo unzip Dracula.zip -d ~/.icons
+gsettings set org.gnome.desktop.interface icon-theme "Dracula"
+sudo rm Dracula.zip
