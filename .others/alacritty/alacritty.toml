@@ -3,7 +3,7 @@
 opacity = 0.8
 
 padding.x = 2
-padding.y = 2
+padding.y = 0
 
 decorations = "Full"
 decorations_theme_variant = "Dark"
