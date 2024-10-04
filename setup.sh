@@ -1,5 +1,16 @@
 #!/bin/bash
 
+# install/update neovim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+sudo rm -rf /opt/nvim
+sudo tar -C /opt -xzf nvim-linux64.tar.gz
+sudo rm nvim-linux64.tar.gz
+
+# neovim appimage
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
+./nvim.appimage
+
 sudo apt-get install ripgrep
 
 # setup font
@@ -31,11 +42,12 @@ cp ~/.config/nvim/.others/.tmux.conf.local .
 echo 'source ~/.bashrc' >> ~/.bash_profile
 
 # shell
-cp -r .others/neofetch ~/.config/
-cp -r .others/synth-shell ~/.config/
+cp -r ~/.config/nvim/.others/neofetch ~/.config/
+cp -r ~/.config/nvim/.others/synth-shell ~/.config/
 
 # gtk theme
-git clone https://github.com/dracula/gtk ./Dracula
+cd ~/.config/nvim
+git clone https://github.com/dracula/gtk Dracula
 cp -r Dracula/assets ~/.config
 mkdir ~/.config/gtk-4.0
 cp Dracula/gtk-4.0/gtk.css ~/.config/gtk-4.0
