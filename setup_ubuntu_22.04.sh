@@ -66,6 +66,7 @@ sudo rm Dracula.zip
 ## install dependencies
 sudo apt-get install build-essential libasound2-dev
 sudo apt install libdbus-1-dev libncursesw5-dev libpulse-dev libssl-dev libxcb1-dev libxcb-render0-dev libxcb-shape0-dev libxcb-xfixes0-dev
+sudo apt-get install libssl-dev libvips-dev libsixel-dev libchafa-dev libtbb-dev
 
 ## install ueberzug for rendering cover 
 echo 'deb http://download.opensuse.org/repositories/home:/justkidding/xUbuntu_22.04/ /' | sudo tee /etc/apt/sources.list.d/home:justkidding.list
@@ -82,12 +83,3 @@ sudo cp target/debug/ncspot /usr/local/bin/
 
 ## ncspot config
 cp -r ~/.config/nvim/.others/ncspot ~/.config/
-
-## use librespot to authenticate
-cd
-git clone https://github.com/librespot-org/librespot.git
-cd librespot 
-cargo build
-./target/debug/librespot --Cache ~/.cache/ncspot/ -j # cache the authencation
-mkdir ~/.cache/ncspot/librespot
-mv ~/.cache/ncspot/credentials.json ~/.cache/ncspot/librespot/
