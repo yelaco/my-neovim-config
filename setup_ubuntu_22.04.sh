@@ -74,12 +74,9 @@ curl -fsSL https://download.opensuse.org/repositories/home:justkidding/xUbuntu_2
 sudo apt update
 sudo apt install ueberzugpp
 
-## build ncspot with cargo
-cd
-git clone https://github.com/hrkfdn/ncspot.git
-cd ncspot
-cargo build --features cover
-sudo cp target/debug/ncspot /usr/local/bin/ 
+## install ncspot 
+# cargo install --locked ncspot --features cover
+cargo install --locked ncspot
 
 ## ncspot config
 cp -r ~/.config/nvim/.others/ncspot ~/.config/
