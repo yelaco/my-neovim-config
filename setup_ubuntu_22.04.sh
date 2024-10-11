@@ -23,9 +23,10 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 # install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >>~/.bashrc
 
 # install sqlfluff
+sudo apt install python3-env
 brew install sqlfluff
 
 # flutter dependencies
@@ -39,7 +40,7 @@ ln -s -f .tmux/.tmux.conf
 cp ~/.config/nvim/.others/.tmux.conf.local .
 
 # bash-profile
-echo 'source ~/.bashrc' >> ~/.bash_profile
+echo 'source ~/.bashrc' >>~/.bash_profile
 
 # shell
 cp -r ~/.config/nvim/.others/neofetch ~/.config/
@@ -68,13 +69,13 @@ sudo apt-get install build-essential libasound2-dev
 sudo apt install libdbus-1-dev libncursesw5-dev libpulse-dev libssl-dev libxcb1-dev libxcb-render0-dev libxcb-shape0-dev libxcb-xfixes0-dev
 sudo apt-get install libssl-dev libvips-dev libsixel-dev libchafa-dev libtbb-dev
 
-## install ueberzug for rendering cover 
+## install ueberzug for rendering cover
 echo 'deb http://download.opensuse.org/repositories/home:/justkidding/xUbuntu_22.04/ /' | sudo tee /etc/apt/sources.list.d/home:justkidding.list
-curl -fsSL https://download.opensuse.org/repositories/home:justkidding/xUbuntu_22.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_justkidding.gpg > /dev/null
+curl -fsSL https://download.opensuse.org/repositories/home:justkidding/xUbuntu_22.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_justkidding.gpg >/dev/null
 sudo apt update
 sudo apt install ueberzugpp
 
-## install ncspot 
+## install ncspot
 # cargo install --locked ncspot --features cover
 cargo install --locked ncspot
 
