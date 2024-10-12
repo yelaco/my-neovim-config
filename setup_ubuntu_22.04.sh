@@ -26,7 +26,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >>~/.bashrc
 
 # install sqlfluff
-sudo apt install python3-env
+sudo apt install python3-venv
 brew install sqlfluff
 
 # flutter dependencies
