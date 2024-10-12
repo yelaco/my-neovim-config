@@ -11,6 +11,10 @@ curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
 ./nvim.appimage
 
+# set default editor as nvim
+sudo update-alternatives --install /usr/bin/editor editor /opt/nvim-linux64/bin/nvim 1
+sudo update-alternatives --set editor /opt/nvim-linux64/bin/nvim
+
 sudo apt-get install ripgrep
 
 # setup font
