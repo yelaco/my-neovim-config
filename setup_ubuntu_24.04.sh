@@ -18,7 +18,7 @@ sudo update-alternatives --set editor /opt/nvim-linux64/bin/nvim
 sudo apt-get install ripgrep
 
 # setup font
-sudo cp .font/*.ttf /usr/share/fonts/truetype/
+sudo cp .fonts/ /usr/share/fonts/truetype/
 sudo fc-cache -f -v
 
 # setup vim-plug

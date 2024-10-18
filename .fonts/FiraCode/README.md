@@ -6,13 +6,13 @@ For more information see:
 * https://github.com/ryanoasis/nerd-fonts/
 * https://github.com/ryanoasis/nerd-fonts/releases/latest/
 
-# JetBrains Mono
+# Fira Code
 
-JetBrains Mono: a typeface made for developers
+**Fira Code** is a free monospaced font with programming ligatures.
 
-For more information have a look at the upstream website: https://github.com/JetBrains/JetBrainsMono
+For more information have a look at the upstream website: https://github.com/tonsky/FiraCode
 
-Version: 2.304
+Version: 6.2
 
 ## Which font?
 
