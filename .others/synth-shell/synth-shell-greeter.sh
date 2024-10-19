@@ -1,3 +1,3 @@
 #!bin/bash
 
-fastfetch --raw ~/.config/nvim/.others/anime-girl.sixel --logo-padding-left 2 --logo-width 32 --logo-height 18 --logo-padding-top 2
+fastfetch --logo ~/.config/nvim/.others/yan.png --logo-padding-left 5 --logo-width 30 --logo-height 18 --logo-padding-top 1
